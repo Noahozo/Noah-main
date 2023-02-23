@@ -4,7 +4,7 @@
 shoppingcar = {}
  
 # 添加商品
-def addgoods(product, num):
+def addproduct(product, num):
     if num.isdigit():  # isdigit()如果字符串只包含數字則返回 True 否則返回 False。
         num = int(num)
         # 判断key是否存在
@@ -18,7 +18,7 @@ def addgoods(product, num):
         print("數量輸入錯誤")
  
 # 删除商品
-def delgoods(name, num):
+def delproduct(name, num):
     product = 0
     for key in shoppingcar:
         if key[0] == name:
@@ -84,7 +84,7 @@ if __name__ == '__main__':
                                 # 減去商品價格
                                 saving -= int(num) * product[1]
                                 # 將商品添加到購物車
-                                addgoods(product, num)
+                                addproduct(product, num)
                     else:
                         print("商品的編號輸入有誤")
  
@@ -96,7 +96,7 @@ if __name__ == '__main__':
                         if product[0] == name:
                             # 添加金額
                             saving += int(num) * product[1]
-                    delgoods(name, num)
+                    delproduct(name, num)
  
                 elif choice == '2':
                     # 結算購物車
