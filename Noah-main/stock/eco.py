@@ -27,8 +27,8 @@ driver = webdriver.Chrome(
 
 host='127.0.0.1'
 usr='root'
-pwd='asd851216'
-db='bdse28stock'
+pwd='******'
+db='******'
 
 connection = pymysql.connect(host=host, port=3306, user=usr, password=pwd, database=db)
 cursor = connection.cursor()
